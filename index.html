@@ -3,66 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craig R. Carignan - University of Maryland & NASA/GSFC</title>
+    <title>Invited Speaker - Craig R. Carignan</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background-color: #0d1b2a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background: #002b49;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-            color: #ffcc00;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            background-color: #0b192e;
+            padding: 40px;
             border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        .profile {
-            border-bottom: 2px solid #002b49;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .badge {
+            display: inline-block;
+            background-color: #00406c;
+            color: #00b4d8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
         }
-        .profile h2 {
-            color: #002b49;
+        .name {
+            color: #00d4ff;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 12px 0;
         }
         .affiliation {
-            font-weight: bold;
-            color: #e21833;
+            color: #a0aec0;
+            font-size: 1.25rem;
+            margin: 0 0 24px 0;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #1e293b;
+            font-weight: 500;
+        }
+        .talk-title {
+            color: #cbd5e1;
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.5;
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Craig R. Carignan</h1>
-        <p>Faculty & Researcher</p>
-    </header>
-    <div class="container">
-        <section class="profile">
-            <h2>Academic & Professional Affiliation</h2>
-            <p class="affiliation">University of Maryland and NASA/GSFC</p>
-            <p>Welcome to the official personal page of Craig R. Carignan. Research focuses on space robotics, control systems, and telerobotics in collaboration with University of Maryland and NASA Goddard Space Flight Center (GSFC).</p>
-        </section>
+    <div class="card">
+        <div class="badge">Invited Speaker</div>
+        <h1 class="name">Craig R. Carignan</h1>
+        <div class="affiliation">University of Maryland and NASA / GSFC</div>
+        <p class="talk-title">Towards Persistent On-Orbit Platforms for Testing Space Robotic Assembly and Servicing</p>
     </div>
 </body>
 </html>
