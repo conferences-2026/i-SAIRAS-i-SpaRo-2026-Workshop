@@ -1,4 +1,52 @@
 <!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enabling Modularity &amp; Interoperability in Space Robotics</title>
+
+<!-- Password Protection Gate -->
+<style>
+  /* Hide the page content immediately */
+  body { display: none !important; }
+</style>
+<script>
+  async function hashPassword(str) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(str);
+    const hash = await crypto.subtle.digest('SHA-256', data);
+    return Array.from(new Uint8Array(hash))
+      .map(b => b.toString(16).padStart(2, '0'))
+      .join('');
+  }
+
+  async function checkAuth() {
+    // Hash for password: MISR@ws-2026*
+    const targetHash = "294a5c68b7ca74251785f0eb140ed556fdbfb57ee20524b0fa0d65b14e9eafe1"; 
+    
+    let userPass = prompt("Please enter the password to access this workshop site:");
+    
+    if (userPass === null) {
+      document.write("<h2 style='font-family:sans-serif; text-align:center; margin-top:50px; color:white;'>Access Denied</h2>");
+      return;
+    }
+
+    let userHash = await hashPassword(userPass);
+
+    if (userHash === targetHash) {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.body.style.setProperty("display", "block", "important");
+      });
+    } else {
+      alert("Incorrect password!");
+      window.location.reload();
+    }
+  }
+
+  checkAuth();
+</script>
+ 
 <!-- saved from url=(0046)file:///C:/Users/p32457mn/Downloads/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
