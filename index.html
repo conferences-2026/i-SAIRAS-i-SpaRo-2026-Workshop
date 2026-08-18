@@ -12,18 +12,8 @@
   body { display: none !important; }
 </style>
 <script>
-  async function hashPassword(str) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(str);
-    const hash = await crypto.subtle.digest('SHA-256', data);
-    return Array.from(new Uint8Array(hash))
-      .map(b => b.toString(16).padStart(2, '0'))
-      .join('');
-  }
-
-  async function checkAuth() {
-    // Hash for password: MISR@ws-2026*
-    const targetHash = "294a5c68b7ca74251785f0eb140ed556fdbfb57ee20524b0fa0d65b14e9eafe1"; 
+  function checkAuth() {
+    const password = "MISR@ws-2026*"; 
     
     let userPass = prompt("Please enter the password to access this workshop site:");
     
@@ -32,9 +22,8 @@
       return;
     }
 
-    let userHash = await hashPassword(userPass);
-
-    if (userHash === targetHash) {
+    // .trim() removes any accidental leading/trailing spaces or invisible newline characters
+    if (userPass.trim() === password) {
       document.addEventListener("DOMContentLoaded", () => {
         document.body.style.setProperty("display", "block", "important");
       });
