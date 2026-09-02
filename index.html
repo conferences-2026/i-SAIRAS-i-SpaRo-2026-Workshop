@@ -1,39 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enabling Modularity &amp; Interoperability in Space Robotics</title>
 
-<!-- Password Protection Gate -->
-<style>
-  /* Hide the page content immediately */
-  body { display: none !important; }
-</style>
-<script>
-  function checkAuth() {
-    const password = "MISR@ws-2026*"; 
-    
-    let userPass = prompt("Please enter the password to access this workshop site:");
-    
-    if (userPass === null) {
-      document.write("<h2 style='font-family:sans-serif; text-align:center; margin-top:50px; color:white;'>Access Denied</h2>");
-      return;
-    }
-
-    // .trim() removes any accidental leading/trailing spaces or invisible newline characters
-    if (userPass.trim() === password) {
-      document.addEventListener("DOMContentLoaded", () => {
-        document.body.style.setProperty("display", "block", "important");
-      });
-    } else {
-      alert("Incorrect password!");
-      window.location.reload();
-    }
-  }
-
-  checkAuth();
 </script>
  
 <!-- saved from url=(0046)file:///C:/Users/p32457mn/Downloads/index.html -->
